@@ -271,8 +271,6 @@ class VKBot:
         list_person = []
         for user in info_person:
             list_person.append(user)
-            if {list_person[3]} not in self.user_favorites(self): # Исключение из просмотра
-                return f'{list_person[0]} {list_person[1]}, ссылка - {list_person[3]}' # Исключение из просмотра
         return f'{list_person[0]} {list_person[1]}, ссылка - {list_person[3]}'
 
     # ИД визави
