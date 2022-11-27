@@ -56,8 +56,7 @@ def insert_data_seen_users(vk_id, offset):
     with connection.cursor() as cursor:
         cursor.execute(
             f"""INSERT INTO seen_users (vk_id) 
-            VALUES ('{vk_id}')
-            OFFSET '{offset}';"""
+            VALUES ('{vk_id}');"""
         )
 
 # Добавить данные в FAVORITES
@@ -71,7 +70,6 @@ def insert_data_favorites(vk_id, offset):
 
 
 def select(offset):
-    """ВЫБОРКА ИЗ НЕПРОСМОТРЕННЫХ ЛЮДЕЙ"""
     with connection.cursor() as cursor:
         cursor.execute(
             f"""SELECT u.first_name,
